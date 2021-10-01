@@ -7,6 +7,7 @@ bot.on('message', message => {
   {
   isReady = false;
   var voiceChannel = message.member.voice.channel;
+  message.reply('Playing the sound of love');
   voiceChannel.join().then(connection =>
   {
      const dispatcher = connection.play('hattja.mp3');
