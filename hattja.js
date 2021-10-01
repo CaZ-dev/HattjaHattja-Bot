@@ -13,6 +13,7 @@ bot.on('message', message => {
      const dispatcher = connection.play('hattja.mp3');
             dispatcher.on("finish", end => {
                 voiceChannel.leave();
+                message.reply('Left the channel because you disregard me');
             });
    }).catch(err => console.log(err));
    isReady = true;
